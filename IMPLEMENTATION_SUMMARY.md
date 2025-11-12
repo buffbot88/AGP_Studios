@@ -92,7 +92,7 @@ All required features have been successfully implemented and verified.
 ## API Endpoints Integrated
 
 ### Authentication
-- `POST /api/auth/phpbb3/login`
+- `POST /api/auth/login`
   - Login with username and password
   - Returns bearer token
 - `GET /api/user/me`
