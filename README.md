@@ -101,7 +101,7 @@ AGP_Studios.IDE/
 The application integrates with the AGP AI Server using the following endpoints:
 
 ### Authentication
-- `POST /api/auth/phpbb3/login` - Login with phpBB3 credentials
+- `POST /api/auth/login` - Login with phpBB3 credentials
   ```json
   Request: { "Username": "user", "Password": "pass" }
   Response: { "Success": true, "Token": "bearer_token" }

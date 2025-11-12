@@ -51,7 +51,7 @@ public class ApiClient
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             
             var response = await _httpClient.PostAsync(
-                $"{GetBaseUrl()}/api/auth/phpbb3/login",
+                $"{GetBaseUrl()}/api/auth/login",
                 content);
             
             if (response.IsSuccessStatusCode)
