@@ -20,6 +20,12 @@ public class ApiClient
         {
             Timeout = TimeSpan.FromSeconds(30)
         };
+        
+        // Set default headers required by the API
+        _httpClient.DefaultRequestHeaders.Accept.Clear();
+        _httpClient.DefaultRequestHeaders.Accept.Add(
+            new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+        _httpClient.DefaultRequestHeaders.Add("User-Agent", "AGP-Studios-IDE/1.0");
     }
     
     public void SetAuthToken(string token)
