@@ -4,8 +4,10 @@
         Title="AGP Studios IDE - Login"
         Height="450"
         Width="500"
+        MinHeight="400"
+        MinWidth="450"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize"
+        ResizeMode="CanResize"
         Background="{StaticResource BackgroundBrush}">
     <Grid>
         <Grid.RowDefinitions>
@@ -31,18 +33,20 @@
         </Border>
         
         <!-- Login Form -->
-        <Border Grid.Row="1" 
-                Background="{StaticResource SurfaceBrush}" 
-                Margin="40,40,40,40"
-                Padding="30"
-                CornerRadius="8">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="10" 
-                                 ShadowDepth="2" 
-                                 Opacity="0.2"/>
-            </Border.Effect>
-            
-            <StackPanel>
+        <ScrollViewer Grid.Row="1" 
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
+            <Border Background="{StaticResource SurfaceBrush}" 
+                    Margin="40,40,40,40"
+                    Padding="30"
+                    CornerRadius="8">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" 
+                                     ShadowDepth="2" 
+                                     Opacity="0.2"/>
+                </Border.Effect>
+                
+                <StackPanel>
                 <TextBlock Text="Sign In" 
                           FontSize="20" 
                           FontWeight="SemiBold"
@@ -103,5 +107,6 @@
                           Margin="0,15,0,0"/>
             </StackPanel>
         </Border>
+    </ScrollViewer>
     </Grid>
 </Window>
